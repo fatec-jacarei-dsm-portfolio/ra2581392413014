@@ -44,10 +44,10 @@ export default function Page() {
       </section>
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="mb-4 text-center text-2xl font-bold">Sobre mim</h2>
+          <h2 className="mb-4 text-center text-3xl font-bold">Sobre mim</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="text-center text-muted-foreground md:text-left md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          <Markdown className="text-center text-muted-foreground  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             {DATA.summary}
           </Markdown>
         </BlurFade>
@@ -55,7 +55,7 @@ export default function Page() {
       <section id="skills">
         <div className="flex flex-col">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="mb-4 text-center text-2xl font-bold">Tecnologias</h2>
+            <h2 className="mb-4 text-center text-3xl font-bold">Tecnologias</h2>
           </BlurFade>
           <div className="flex flex-wrap justify-center gap-2">
             {DATA.skills.map((skill, id) => (
@@ -70,17 +70,51 @@ export default function Page() {
         <div className="w-full">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <div className="justify-centertext-center flex flex-col items-center">
-              <h2 className="mb-4 text-center text-2xl font-bold">
-                Confira meus últimos projetos
+              <h2 className="mb-4 text-center text-3xl font-bold">
+                Projetos acadêmicos
               </h2>
-              <p className="mb-2 text-center text-muted-foreground md:text-left md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Atuei no desenvolvimento de projetos acadêmicos e pessoais.
+              {/* <p className="mb-2 text-center text-muted-foreground md:text-left md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Atuei no desenvolvimento de projetos acadêmicos.
                 Confira:
-              </p>
+              </p> */}
             </div>
           </BlurFade>
           <div className="mx-auto grid max-w-[800px] grid-cols-1 gap-3 sm:grid-cols-2">
-            {DATA.projects.map((project, id) => (
+            {DATA.projects.academic.map((project, id) => (
+              <BlurFade
+                key={project.title}
+                delay={BLUR_FADE_DELAY * 8 + id * 0.05}
+              >
+                <ProjectCard
+                  href={project.href}
+                  title={project.title}
+                  description={project.description}
+                  dates={project.dates}
+                  tags={project.technologies}
+                  image={project.image}
+                  video={project.video}
+                  links={project.links}
+                />
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section id="projects">
+        <div className="w-full">
+          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+            <div className="justify-centertext-center flex flex-col items-center">
+              <h2 className="mb-4 text-center text-3xl font-bold">
+                Projetos pessoais
+              </h2>
+              {/* <p className="mb-2 text-center text-muted-foreground md:text-left md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Atuei no desenvolvimento de projetos pessoais.
+                Confira:
+              </p> */}
+            </div>
+          </BlurFade>
+          <div className="mx-auto grid max-w-[800px] grid-cols-1 gap-3 sm:grid-cols-2">
+            {DATA.projects.personal.map((project, id) => (
               <BlurFade
                 key={project.title}
                 delay={BLUR_FADE_DELAY * 8 + id * 0.05}
@@ -103,7 +137,7 @@ export default function Page() {
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="mb-4 text-center text-2xl font-bold">
+            <h2 className="mb-4 text-center text-3xl font-bold">
               Formação acadêmica
             </h2>
           </BlurFade>
@@ -127,7 +161,7 @@ export default function Page() {
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
-            <h2 className="mb-4 text-center text-2xl font-bold">
+            <h2 className="mb-4 text-center text-3xl font-bold">
               Experiência profissional
             </h2>
           </BlurFade>

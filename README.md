@@ -1,2 +1,5 @@
-# ra2581392413014
-Repositório do aluno LUCAS ROQUE ALVIM CRUZ.
+# Portfólio de Projetos - Fatec Jacareí
+
+### Aluno: Lucas Roque Alvim Cruz
+### Curso: Desenvolvimento de Software Multiplataforma
+### Turma: 1o. Semestre de 2024

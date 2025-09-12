@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Qli-mate",
     description: "Plataforma para monitoramento climático e prevenção de riscos associados a eventos de vento extremo.",
-    tags: ["React", "TailwindCSS", "MongoDB", "Shadcn"],
+    tags: ["NextJS", "TailwindCSS", "MongoDB", "Shadcn", "Zod", "BetterAuth"],
     url: "https://github.com/storm-access-abp/qli-mate",
     image: "/images/qli-mate.jpg"
   },

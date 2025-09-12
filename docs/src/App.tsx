@@ -3,7 +3,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Index from "./pages/Index";
 
 const App = () => (
-  <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+  <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Index />} />

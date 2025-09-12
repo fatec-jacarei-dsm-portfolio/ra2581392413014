@@ -15,7 +15,7 @@ export const Hero = () => {
 
           <div className="prose prose-gray max-w-none">
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Estudante em Desenvolvimento de Software.
+              Estudante em Desenvolvimento de Software pela FATEC - Jacareí.
             </p>
           </div>
           <div className="flex gap-4 mt-8">

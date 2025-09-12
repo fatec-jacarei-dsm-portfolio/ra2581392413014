@@ -6,8 +6,7 @@ export const About = () => {
         <h2 className="text-2xl font-medium text-gray-900 mb-6">Sobre mim</h2>
         <div className="space-y-4 text-gray-700">
           <p>
-            Apaixonado por tecnologia, estou focado em criar soluções eficientes e inovadoras, desde o design da interface até a implementação de funcionalidades escaláveis.
-          </p>
+          Sou apaixonado por tecnologia e movido pela constante busca por inovação. Tenho como foco o desenvolvimento de soluções eficientes e inteligentes, atuando desde a concepção de interfaces intuitivas até a implementação de funcionalidades escaláveis e robustas. Acredito no poder da tecnologia para transformar experiências e gerar impacto na vida das pessoas.</p>
         </div>
       </div>
     </section>

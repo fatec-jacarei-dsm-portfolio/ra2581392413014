@@ -15,7 +15,7 @@ export const PersonalProjects = () => {
         "Shadcn UI",
         "BetterAuth",
       ],
-      url: "https://github.com/lucasroqe/taiz",
+      url: "https://github.com/lucasroqe/spendo",
       image: "images/spendo.png",
     },
     {

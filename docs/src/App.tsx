@@ -4,7 +4,7 @@ import Index from "./pages/Index";
 
 const App = () => (
   <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-    <BrowserRouter>
+    <BrowserRouter basename="/ra2581392413014">
       <Routes>
         <Route path="/" element={<Index />} />
       </Routes>

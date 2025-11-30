@@ -31,6 +31,7 @@ export const PersonalProjects = () => {
         "TailwindCSS",
         "Shadcn UI",
         "BetterAuth",
+        "ChatBot"
       ],
       url: "https://github.com/lucasroqe/taiz",
       image: "images/taiz.png",

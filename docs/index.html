@@ -20,7 +20,6 @@
         const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
         if (savedTheme === "dark" || (!savedTheme && prefersDark)) document.documentElement.dataset.theme = "dark";
       } catch (_) {}
-      document.documentElement.classList.add("js");
     </script>
   </head>
   <body>
@@ -69,17 +68,27 @@
       <div class="divider" aria-hidden="true"></div>
       <section class="section reveal" id="projetos">
         <div class="section-heading">
-          <div><p class="eyebrow">Trabalhos selecionados</p><h2>Projetos <sup>(7)</sup></h2></div>
+          <div><p class="eyebrow">Trabalhos selecionados</p><h2>Projetos <sup>(8)</sup></h2></div>
         </div>
 
         <div class="project-tabs" role="tablist" aria-label="Categorias de projetos">
           <button class="tab-button" id="tab-academicos" type="button" role="tab" aria-selected="true" aria-controls="academicos" data-project-tab="academicos">Acadêmicos</button>
-          <button class="tab-button" id="tab-profissionais" type="button" role="tab" aria-selected="false" aria-controls="profissionais" data-project-tab="profissionais" tabindex="-1">Profissionais</button>
           <button class="tab-button" id="tab-pessoais" type="button" role="tab" aria-selected="false" aria-controls="pessoais" data-project-tab="pessoais" tabindex="-1">Pessoais</button>
         </div>
 
         <div class="tab-panel" id="academicos" role="tabpanel" aria-labelledby="tab-academicos">
           <div class="project-grid">
+            <article class="project-card">
+              <img src="./public/images/kicker-iq-app.jpg" alt="Apresentação do projeto Kicker IQ" loading="lazy" />
+              <div class="project-card__body">
+                <div class="project-card__heading"><h3>Kicker IQ</h3><span>5DSM — 1º Sem. 2026</span></div>
+                <p>Sistema inteligente para monitoramento e análise do desempenho físico de atletas de futebol, transformando dados históricos em informações para apoiar decisões técnicas e táticas.</p>
+                <p class="contribution"><strong>Minha contribuição:</strong> atuei como desenvolvedor front-end, implementando interfaces responsivas e dashboards para visualização e comparação dos indicadores dos atletas.</p>
+                <ul class="tags" aria-label="Tecnologias do Kicker IQ"><li>Next.js</li><li>TypeScript</li><li>Recharts</li><li>Tailwind CSS</li><li>Machine Learning</li></ul>
+                <a class="repository-link" href="https://github.com/Steel-Hard/Kicker_IQ" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span> Repositório</a>
+              </div>
+            </article>
+
             <article class="project-card">
               <img src="./public/images/vesta.png" alt="Tela do projeto Vesta" loading="lazy" />
               <div class="project-card__body">
@@ -123,14 +132,6 @@
                 <a class="repository-link" href="https://github.com/lucasroqe/golden-hive" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span> Repositório</a>
               </div>
             </article>
-          </div>
-        </div>
-
-        <div class="tab-panel" id="profissionais" role="tabpanel" aria-labelledby="tab-profissionais" hidden>
-          <div class="empty-state">
-            <span aria-hidden="true">◌</span><h3>Projetos profissionais confidenciais</h3>
-            <p>Minha atuação profissional está detalhada em Experiência. Projetos internos não são publicados por confidencialidade e, por isso, não possuem repositórios públicos.</p>
-            <a href="#experiencia">Ver experiência profissional</a>
           </div>
         </div>
 
@@ -181,8 +182,14 @@
             <div class="timeline-item__content">
               <div class="timeline-item__title"><h3><a href="https://www.linkedin.com/company/sps-group-br/" target="_blank" rel="noopener noreferrer">SPS Group</a></h3><span class="current-dot"><span>Emprego atual</span></span></div>
               <div class="position-heading"><strong>Analista de Sustentação Jr</strong><span>04/2024 — atual</span></div>
-              <p>Suporte técnico a usuários do SAP Business One, desenvolvimento e otimização de consultas em SQL Server e SAP HANA, manutenção de relatórios e integrações via SAP Service Layer.</p>
-              <ul class="tags"><li>SAP Business One</li><li>SQL Server</li><li>SAP HANA</li><li>Crystal Reports</li><li>REST API</li></ul>
+              <ul class="experience-points">
+                <li>Diagnóstico e resolução de incidentes de software no ecossistema <strong>SAP Business One</strong>.</li>
+                <li>Correção, otimização e desenvolvimento de consultas e procedures em <strong>SQL Server</strong> e <strong>SAP HANA</strong>, com foco em dados financeiros, faturamento, contas a pagar e receber e conciliações.</li>
+                <li>Depuração e análise de código em <strong>C#</strong>, nos add-ons SAP B1, e <strong>JavaScript</strong>, nas integrações, contribuindo para a resolução de problemas em componentes internos.</li>
+                <li>Ajustes e implementações na plataforma interna em componentes que utilizam <strong>JSON</strong> e consultas <strong>SQL</strong>.</li>
+                <li>Integração e consumo da <strong>SAP Service Layer</strong> por requisições HTTP REST para automação de processos e comunicação entre sistemas corporativos.</li>
+              </ul>
+              <ul class="tags"><li>SAP Business One</li><li>SQL Server</li><li>SAP HANA</li><li>C#</li><li>JavaScript</li><li>JSON</li><li>REST API</li></ul>
             </div>
           </article>
           <article class="timeline-item">
@@ -222,7 +229,7 @@
         <div class="contact-links"><a href="https://github.com/lucasroqe" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/lucasroqe/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
       </section>
 
-      <footer><p>© <span id="current-year">2026</span> Lucas Roque.</p><p>Desenvolvido com HTML, CSS e JavaScript.</p></footer>
+      <footer><p>© <span id="current-year">2026</span> Lucas Roque.</p></footer>
     </main>
 
     <nav class="dock" aria-label="Navegação principal">

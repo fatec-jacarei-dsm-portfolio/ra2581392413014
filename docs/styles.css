@@ -251,22 +251,6 @@ h3 { margin: 0; font-size: 1.05rem; line-height: 1.35; letter-spacing: -.018em; 
 }
 .repository-link:hover { filter: contrast(1.1); transform: translateY(-1px); }
 .tab-panel[hidden] { display: none; }
-.empty-state {
-  display: grid;
-  min-height: 18rem;
-  place-items: center;
-  align-content: center;
-  padding: 2rem;
-  border: 1px dashed var(--border);
-  border-radius: 1rem;
-  background: var(--surface);
-  text-align: center;
-}
-.empty-state > span { color: var(--muted-soft); font-size: 2rem; }
-.empty-state h3 { margin-top: .5rem; }
-.empty-state p { max-width: 31rem; margin: .5rem auto 1rem; color: var(--muted); font-size: .86rem; }
-.empty-state a { font-size: .82rem; font-weight: 700; text-underline-offset: 4px; }
-
 .timeline { display: grid; gap: .35rem; }
 .timeline-item { position: relative; display: grid; grid-template-columns: 2.3rem 1fr; gap: .9rem; padding: 1rem 0; }
 .timeline-item:not(:last-child)::before { position: absolute; top: 3.25rem; bottom: -1.1rem; left: 1.12rem; width: 1px; background: var(--border); content: ""; }
@@ -296,6 +280,9 @@ h3 { margin: 0; font-size: 1.05rem; line-height: 1.35; letter-spacing: -.018em; 
 .position-heading strong { color: var(--foreground); font-weight: 600; }
 .position-heading span { white-space: nowrap; }
 .timeline-item__content > p { margin: .65rem 0 0; color: var(--muted); font-size: .82rem; }
+.experience-points { margin: .75rem 0 0; padding-left: 1.1rem; color: var(--muted); font-size: .8rem; }
+.experience-points li + li { margin-top: .45rem; }
+.experience-points strong { color: var(--foreground); font-weight: 650; }
 
 .education-list { display: grid; }
 .education-list article { display: grid; grid-template-columns: 2.3rem 1fr auto; align-items: center; gap: .9rem; padding: 1rem 0; }
@@ -367,7 +354,6 @@ footer p { margin: 0; }
 :root[data-theme="dark"] .sun-icon { display: none; }
 :root[data-theme="dark"] .moon-icon { display: block; }
 .reveal { opacity: 1; transform: none; }
-.js .reveal { opacity: 0; transform: translateY(8px); transition: opacity 450ms ease, transform 450ms ease; }
 .reveal.is-visible { opacity: 1; transform: none; }
 
 @media (max-width: 680px) {

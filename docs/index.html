@@ -1,15 +1,240 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Lucas</title>
-    <meta name="description" content="Portfolio Lucas Roque" />
-    <meta name="author" content="Lucas" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="Portfólio acadêmico e profissional de Lucas Roque, estudante de Desenvolvimento de Software Multiplataforma na Fatec Jacareí." />
+    <meta name="author" content="Lucas Roque Alvim Cruz" />
+    <meta property="og:title" content="Lucas Roque — Desenvolvedor de Software" />
+    <meta property="og:description" content="Projetos, experiências e formação de Lucas Roque." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fatec-jacarei-dsm-portfolio.github.io/ra2581392413014/" />
+    <meta property="og:image" content="./public/images/me.jpg" />
+    <title>Lucas Roque — Desenvolvedor de Software</title>
+    <link rel="icon" href="./public/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem("portfolio-theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (savedTheme === "dark" || (!savedTheme && prefersDark)) document.documentElement.dataset.theme = "dark";
+      } catch (_) {}
+      document.documentElement.classList.add("js");
+    </script>
   </head>
-
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <main id="conteudo" class="page-shell">
+      <header class="profile reveal" id="inicio">
+        <img class="profile__avatar" src="./public/images/me.jpg" alt="Foto de Lucas Roque" width="144" height="144" fetchpriority="high" />
+        <div>
+          <p class="eyebrow">Portfólio Fatec Jacareí</p>
+          <h1>Lucas Roque</h1>
+          <p class="profile__role">Desenvolvedor de Software.</p>
+          <a class="profile__social" href="https://github.com/lucasroqe" target="_blank" rel="noopener noreferrer">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.57-.29-5.27-1.28-5.27-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.76 0c2.19-1.49 3.15-1.18 3.15-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.83 1.19 3.08 0 4.41-2.71 5.38-5.29 5.67.42.36.79 1.06.79 2.14v3.18c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z" /></svg>
+            <span>lucasroqe</span>
+          </a>
+        </div>
+      </header>
+
+      <div class="divider" aria-hidden="true"></div>
+      <section class="section reveal" id="sobre">
+        <h2>Sobre</h2>
+        <div class="prose">
+          <p>Desenvolvedor de Software com atuação desde a modelagem do banco de dados até a interface final. Meu foco principal é no ecossistema TypeScript, utilizando Next.js, React e Node.js para entregar soluções modernas e escaláveis.</p>
+          <p>No dia a dia, trabalho com integrações de APIs e bancos de dados como SQL e SAP HANA. Tenho atenção à arquitetura e à organização do código em todas as etapas do desenvolvimento.</p>
+          <p>Busco evoluir como desenvolvedor full-stack e criar produtos digitais acessíveis, confiáveis e úteis. Além de projetos colaborativos, desenvolvo ferramentas próprias voltadas à produtividade e ao desenvolvimento web.</p>
+        </div>
+      </section>
+
+      <div class="divider" aria-hidden="true"></div>
+      <section class="section reveal" id="stack">
+        <h2>Stack</h2>
+        <ul class="stack-list" aria-label="Tecnologias e conhecimentos técnicos">
+          <li><span class="stack-icon stack-icon--dark">N</span><span>Next.js</span></li>
+          <li><span class="stack-icon stack-icon--cyan">R</span><span>React</span></li>
+          <li><span class="stack-icon stack-icon--blue">TS</span><span>TypeScript</span></li>
+          <li><span class="stack-icon stack-icon--yellow">JS</span><span>JavaScript</span></li>
+          <li><span class="stack-icon stack-icon--green">JS</span><span>Node.js</span></li>
+          <li><span class="stack-icon stack-icon--navy">SQL</span><span>PostgreSQL</span></li>
+          <li><span class="stack-icon stack-icon--teal">DB</span><span>MongoDB</span></li>
+          <li><span class="stack-icon stack-icon--sky">CSS</span><span>Tailwind CSS</span></li>
+          <li><span class="stack-icon stack-icon--orange">D</span><span>Docker</span></li>
+        </ul>
+      </section>
+
+      <div class="divider" aria-hidden="true"></div>
+      <section class="section reveal" id="projetos">
+        <div class="section-heading">
+          <div><p class="eyebrow">Trabalhos selecionados</p><h2>Projetos <sup>(7)</sup></h2></div>
+        </div>
+
+        <div class="project-tabs" role="tablist" aria-label="Categorias de projetos">
+          <button class="tab-button" id="tab-academicos" type="button" role="tab" aria-selected="true" aria-controls="academicos" data-project-tab="academicos">Acadêmicos</button>
+          <button class="tab-button" id="tab-profissionais" type="button" role="tab" aria-selected="false" aria-controls="profissionais" data-project-tab="profissionais" tabindex="-1">Profissionais</button>
+          <button class="tab-button" id="tab-pessoais" type="button" role="tab" aria-selected="false" aria-controls="pessoais" data-project-tab="pessoais" tabindex="-1">Pessoais</button>
+        </div>
+
+        <div class="tab-panel" id="academicos" role="tabpanel" aria-labelledby="tab-academicos">
+          <div class="project-grid">
+            <article class="project-card">
+              <img src="./public/images/vesta.png" alt="Tela do projeto Vesta" loading="lazy" />
+              <div class="project-card__body">
+                <div class="project-card__heading"><h3>Vesta</h3><span>4DSM — 2º Sem. 2025</span></div>
+                <p>Sistema de detecção de quedas para idosos com dispositivo vestível ESP32 conectado a um aplicativo mobile e envio automático de alertas.</p>
+                <p class="contribution"><strong>Minha contribuição:</strong> desenvolvi a interface mobile e os fluxos de acompanhamento e alertas como desenvolvedor front-end.</p>
+                <ul class="tags" aria-label="Tecnologias do Vesta"><li>React Native</li><li>Expo</li><li>ESP32</li><li>MQTT</li><li>MongoDB</li></ul>
+                <a class="repository-link" href="https://github.com/Steel-Hard/VESTA" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span> Repositório</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="./public/images/qli-mate.jpg" alt="Tela do projeto Qlimate" loading="lazy" />
+              <div class="project-card__body">
+                <div class="project-card__heading"><h3>Qlimate</h3><span>3DSM — 1º Sem. 2025</span></div>
+                <p>Plataforma de monitoramento climático para comunidades ao redor do Lago de Furnas, com dados de estações meteorológicas e alertas de segurança.</p>
+                <p class="contribution"><strong>Minha contribuição:</strong> atuei como desenvolvedor full-stack na interface web e na implementação da autenticação de usuários.</p>
+                <ul class="tags" aria-label="Tecnologias do Qlimate"><li>Next.js</li><li>Prisma</li><li>Better Auth</li><li>MongoDB</li><li>Tailwind CSS</li></ul>
+                <a class="repository-link" href="https://github.com/storm-access-abp/qli-mate" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span> Repositório</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="./public/images/nutrime.png" alt="Tela do projeto NutriMe" loading="lazy" />
+              <div class="project-card__body">
+                <div class="project-card__heading"><h3>NutriMe</h3><span>2DSM — 2º Sem. 2024</span></div>
+                <p>Plataforma de acompanhamento nutricional na qual usuários registram refeições, monitoram metas e recebem suporte de nutricionistas.</p>
+                <p class="contribution"><strong>Minha contribuição:</strong> desenvolvi a interface web e integrei os fluxos do front-end aos serviços da aplicação.</p>
+                <ul class="tags" aria-label="Tecnologias do NutriMe"><li>React</li><li>TypeScript</li><li>Node.js</li><li>PostgreSQL</li><li>Tailwind CSS</li></ul>
+                <a class="repository-link" href="https://github.com/crewTech-ABP/NutriMe" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span> Repositório</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="./public/images/golden-hive.jpg" alt="Tela do projeto Golden Hive Solutions" loading="lazy" />
+              <div class="project-card__body">
+                <div class="project-card__heading"><h3>Golden Hive Solutions</h3><span>1DSM — 1º Sem. 2024</span></div>
+                <p>Sistema web didático criado para apresentar e aplicar a metodologia ágil Scrum de forma interativa.</p>
+                <p class="contribution"><strong>Minha contribuição:</strong> desenvolvi a interface web, seus componentes visuais e a experiência de navegação.</p>
+                <ul class="tags" aria-label="Tecnologias do Golden Hive Solutions"><li>JavaScript</li><li>HTML5</li><li>CSS3</li><li>PostgreSQL</li></ul>
+                <a class="repository-link" href="https://github.com/lucasroqe/golden-hive" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span> Repositório</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="profissionais" role="tabpanel" aria-labelledby="tab-profissionais" hidden>
+          <div class="empty-state">
+            <span aria-hidden="true">◌</span><h3>Projetos profissionais confidenciais</h3>
+            <p>Minha atuação profissional está detalhada em Experiência. Projetos internos não são publicados por confidencialidade e, por isso, não possuem repositórios públicos.</p>
+            <a href="#experiencia">Ver experiência profissional</a>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="pessoais" role="tabpanel" aria-labelledby="tab-pessoais" hidden>
+          <div class="project-grid">
+            <article class="project-card">
+              <img src="./public/images/spendo.png" alt="Tela do projeto Spendo" loading="lazy" />
+              <div class="project-card__body">
+                <div class="project-card__heading"><h3>Spendo</h3><span>1º Sem. 2025</span></div>
+                <p>Aplicação de gestão de gastos pessoais com categorização de despesas, acompanhamento de hábitos e gráficos intuitivos.</p>
+                <p class="contribution"><strong>Minha contribuição:</strong> idealizei e desenvolvi a aplicação full-stack, da modelagem dos dados à interface.</p>
+                <ul class="tags" aria-label="Tecnologias do Spendo"><li>Next.js</li><li>TypeScript</li><li>SQLite</li><li>Prisma</li><li>Better Auth</li></ul>
+                <a class="repository-link" href="https://github.com/lucasroqe/spendo" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span> Repositório</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="./public/images/taiz.png" alt="Tela do projeto Taiz" loading="lazy" />
+              <div class="project-card__body">
+                <div class="project-card__heading"><h3>Taiz</h3><span>1º Sem. 2025</span></div>
+                <p>CLI para criar projetos Next.js com estrutura inicial e autenticação configuradas, incluindo telas de login e registro.</p>
+                <p class="contribution"><strong>Minha contribuição:</strong> projetei a experiência da linha de comando, os templates e a automação de configuração.</p>
+                <ul class="tags" aria-label="Tecnologias do Taiz"><li>Next.js</li><li>TypeScript</li><li>Node.js</li><li>Tailwind CSS</li></ul>
+                <a class="repository-link" href="https://github.com/lucasroqe/taiz" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span> Repositório</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="./public/images/auth-form.jpg" alt="Tela do projeto Auth Form" loading="lazy" />
+              <div class="project-card__body">
+                <div class="project-card__heading"><h3>Auth Form</h3><span>1º Sem. 2025</span></div>
+                <p>Template completo de autenticação com telas de login e registro, validação de formulários e estrutura pronta para novos projetos.</p>
+                <p class="contribution"><strong>Minha contribuição:</strong> desenvolvi os fluxos de autenticação, a validação, a persistência e os componentes da interface.</p>
+                <ul class="tags" aria-label="Tecnologias do Auth Form"><li>Next.js</li><li>TypeScript</li><li>Prisma</li><li>Auth.js</li><li>Zod</li></ul>
+                <a class="repository-link" href="https://github.com/lucasroqe/auth-form" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span> Repositório</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider" aria-hidden="true"></div>
+      <section class="section reveal" id="experiencia">
+        <h2>Experiência</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <img class="timeline-item__marker" src="./public/images/sps.png" alt="" width="37" height="37" loading="lazy" />
+            <div class="timeline-item__content">
+              <div class="timeline-item__title"><h3><a href="https://www.linkedin.com/company/sps-group-br/" target="_blank" rel="noopener noreferrer">SPS Group</a></h3><span class="current-dot"><span>Emprego atual</span></span></div>
+              <div class="position-heading"><strong>Analista de Sustentação Jr</strong><span>04/2024 — atual</span></div>
+              <p>Suporte técnico a usuários do SAP Business One, desenvolvimento e otimização de consultas em SQL Server e SAP HANA, manutenção de relatórios e integrações via SAP Service Layer.</p>
+              <ul class="tags"><li>SAP Business One</li><li>SQL Server</li><li>SAP HANA</li><li>Crystal Reports</li><li>REST API</li></ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <img class="timeline-item__marker" src="./public/images/redt.png" alt="" width="37" height="37" loading="lazy" />
+            <div class="timeline-item__content">
+              <h3>RedT Telecom</h3>
+              <div class="position-heading"><strong>Analista de TI</strong><span>05/2022 — 08/2024</span></div>
+              <p>Suporte remoto e presencial aos equipamentos de videoconferência e telefonia da Embraer, com diagnóstico e resolução de chamados técnicos.</p>
+              <ul class="tags"><li>Suporte técnico</li><li>Windows</li><li>Microsoft Office</li><li>Redes</li></ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <img class="timeline-item__marker" src="./public/images/netjacarei.png" alt="" width="37" height="37" loading="lazy" />
+            <div class="timeline-item__content">
+              <h3>Net Jacareí</h3>
+              <div class="position-heading"><strong>Analista de suporte técnico</strong><span>07/2021 — 05/2022</span></div>
+              <p>Suporte N2 para clientes empresariais e residenciais, configuração de ONUs, diagnóstico de rede e acompanhamento de ordens de serviço.</p>
+              <ul class="tags"><li>Suporte N2</li><li>Redes</li><li>Configuração de ONU</li><li>Atendimento</li></ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="divider" aria-hidden="true"></div>
+      <section class="section reveal" id="formacao">
+        <h2>Formação</h2>
+        <div class="education-list">
+          <article><img class="education-logo" src="./public/images/fatec.jpg" alt="" width="37" height="37" loading="lazy" /><div><h3>Fatec Jacareí</h3><p>Tecnólogo em Desenvolvimento de Software Multiplataforma</p></div><time>01/2024 — 12/2026</time></article>
+          <article><img class="education-logo" src="./public/images/etec.jpg" alt="" width="37" height="37" loading="lazy" /><div><h3>Etec Cônego José Bento</h3><p>Técnico em Redes de Computadores</p></div><time>01/2020 — 06/2021</time></article>
+          <article><img class="education-logo" src="./public/images/etec.jpg" alt="" width="37" height="37" loading="lazy" /><div><h3>Etec Cônego José Bento</h3><p>Técnico em Administração integrado ao Ensino Médio</p></div><time>01/2016 — 12/2018</time></article>
+        </div>
+      </section>
+
+      <div class="divider" aria-hidden="true"></div>
+      <section class="section contact reveal" id="contato">
+        <p class="eyebrow">Redes profissionais</p><h2>Vamos conversar?</h2><p>Acompanhe meus projetos e minha trajetória profissional.</p>
+        <div class="contact-links"><a href="https://github.com/lucasroqe" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/lucasroqe/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
+      </section>
+
+      <footer><p>© <span id="current-year">2026</span> Lucas Roque.</p><p>Desenvolvido com HTML, CSS e JavaScript.</p></footer>
+    </main>
+
+    <nav class="dock" aria-label="Navegação principal">
+      <a href="#inicio" aria-label="Início" data-tooltip="Início"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z" /></svg></a>
+      <a href="#sobre" aria-label="Sobre" data-tooltip="Sobre"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></a>
+      <a href="#projetos" aria-label="Projetos" data-tooltip="Projetos"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M8 6V4h8v2M3 11h18"/></svg></a>
+      <span class="dock__separator" aria-hidden="true"></span>
+      <a href="https://github.com/lucasroqe" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-tooltip="GitHub"><svg class="filled-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.57-.29-5.27-1.28-5.27-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.76 0c2.19-1.49 3.15-1.18 3.15-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.83 1.19 3.08 0 4.41-2.71 5.38-5.29 5.67.42.36.79 1.06.79 2.14v3.18c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z" /></svg></a>
+      <a href="https://www.linkedin.com/in/lucasroqe/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-tooltip="LinkedIn"><svg class="filled-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5.3 7.8H1.7V22h3.6V7.8ZM3.5 2A2.1 2.1 0 1 0 3.5 6a2.1 2.1 0 0 0 0-4ZM22 13.9c0-4.3-2.3-6.3-5.4-6.3-2.5 0-3.6 1.4-4.2 2.3v-2H8.8V22h3.6v-7c0-1.9.4-3.7 2.7-3.7 2.3 0 2.3 2.1 2.3 3.8V22H22v-8.1Z"/></svg></a>
+      <span class="dock__separator" aria-hidden="true"></span>
+      <button id="theme-toggle" type="button" aria-label="Alternar tema" data-tooltip="Tema"><svg class="sun-icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="moon-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg></button>
+    </nav>
+    <script src="./app.js" defer></script>
   </body>
 </html>

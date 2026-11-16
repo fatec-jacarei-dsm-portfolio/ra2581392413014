@@ -13,7 +13,7 @@
     <meta property="og:image" content="./public/images/me.jpg" />
     <title>Lucas Roque — Desenvolvedor de Software</title>
     <link rel="icon" href="./public/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=2" />
     <script>
       try {
         const savedTheme = localStorage.getItem("portfolio-theme");
@@ -53,15 +53,28 @@
       <section class="section reveal" id="stack">
         <h2>Stack</h2>
         <ul class="stack-list" aria-label="Tecnologias e conhecimentos técnicos">
-          <li><span class="stack-icon stack-icon--dark">N</span><span>Next.js</span></li>
-          <li><span class="stack-icon stack-icon--cyan">R</span><span>React</span></li>
-          <li><span class="stack-icon stack-icon--blue">TS</span><span>TypeScript</span></li>
-          <li><span class="stack-icon stack-icon--yellow">JS</span><span>JavaScript</span></li>
-          <li><span class="stack-icon stack-icon--green">JS</span><span>Node.js</span></li>
-          <li><span class="stack-icon stack-icon--navy">SQL</span><span>PostgreSQL</span></li>
-          <li><span class="stack-icon stack-icon--teal">DB</span><span>MongoDB</span></li>
-          <li><span class="stack-icon stack-icon--sky">CSS</span><span>Tailwind CSS</span></li>
-          <li><span class="stack-icon stack-icon--orange">D</span><span>Docker</span></li>
+          <li>
+            <a class="stack-link" href="https://nextjs.org/" target="_blank" rel="noopener noreferrer" aria-label="Next.js" data-tooltip="Next.js">
+              <img class="stack-icon__light" src="./public/icons/nextjs-light.svg" alt="" width="32" height="32" />
+              <img class="stack-icon__dark" src="./public/icons/nextjs-dark.svg" alt="" width="32" height="32" />
+            </a>
+          </li>
+          <li><a class="stack-link" href="https://react.dev/" target="_blank" rel="noopener noreferrer" aria-label="React" data-tooltip="React"><img src="./public/icons/react.svg" alt="" width="32" height="32" /></a></li>
+          <li><a class="stack-link" href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" aria-label="Tailwind CSS" data-tooltip="Tailwind CSS"><img src="./public/icons/tailwindcss.svg" alt="" width="32" height="32" /></a></li>
+          <li>
+            <a class="stack-link" href="https://ui.shadcn.com/" target="_blank" rel="noopener noreferrer" aria-label="shadcn/ui" data-tooltip="shadcn/ui">
+              <img class="stack-icon__light" src="./public/icons/shadcnui-light.svg" alt="" width="32" height="32" />
+              <img class="stack-icon__dark" src="./public/icons/shadcnui-dark.svg" alt="" width="32" height="32" />
+            </a>
+          </li>
+          <li><a class="stack-link" href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer" aria-label="TypeScript" data-tooltip="TypeScript"><img src="./public/icons/typescript.svg" alt="" width="32" height="32" /></a></li>
+          <li><a class="stack-link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" aria-label="JavaScript" data-tooltip="JavaScript"><img src="./public/icons/javascript.svg" alt="" width="32" height="32" /></a></li>
+          <li><a class="stack-link" href="https://nodejs.org/" target="_blank" rel="noopener noreferrer" aria-label="Node.js" data-tooltip="Node.js"><img src="./public/icons/nodejs.svg" alt="" width="32" height="32" /></a></li>
+          <li><a class="stack-link" href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer" aria-label="PostgreSQL" data-tooltip="PostgreSQL"><img src="./public/icons/postgresql.svg" alt="" width="32" height="32" /></a></li>
+          <li><a class="stack-link" href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer" aria-label="MySQL" data-tooltip="MySQL"><img src="./public/icons/mysql.svg" alt="" width="32" height="32" /></a></li>
+          <li><a class="stack-link" href="https://www.mongodb.com/" target="_blank" rel="noopener noreferrer" aria-label="MongoDB" data-tooltip="MongoDB"><img src="./public/icons/mongodb.svg" alt="" width="32" height="32" /></a></li>
+          <li><a class="stack-link" href="https://orm.drizzle.team/" target="_blank" rel="noopener noreferrer" aria-label="Drizzle ORM" data-tooltip="Drizzle ORM"><img src="./public/icons/drizzle.svg" alt="" width="32" height="32" /></a></li>
+          <li><a class="stack-link" href="https://www.docker.com/" target="_blank" rel="noopener noreferrer" aria-label="Docker" data-tooltip="Docker"><img src="./public/icons/docker.svg" alt="" width="32" height="32" /></a></li>
         </ul>
       </section>
 
